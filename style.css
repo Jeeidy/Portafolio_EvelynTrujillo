@@ -3,56 +3,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap');
 
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0; /*Elimina todas las márgenes*/
+    padding: 0; /*Relleno, elimina todos los acolchados*/
 }
 
 body {
-    font-family: "Lora", serif;
+    font-family: "Lora", serif; /*Lista de familias de fuentes define la prioridad en la que el navegador debe elegir la familia de fuentes. Serif: todos los caracteres tienen terminaciones de trazo. */
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /*Establece el comportamiento de un cuadro de desplazamiento cuando el desplazamiento lo activa la navegación o las API de desplazamiento CSSOM*/
 }
 
 p {
-    color: gold;
+    color: gold; /*Establece un color*/
 }
 
 /*TRANSITION*/
 
 a, .btn {
-    transition: all 300ms ease;
+    transition: all 300ms ease; /*Proporciona una forma de controlar la velocidad de la animación al cambiar las propiedades de CSS*/
 }
 
 /*DESKTOP NAV*/
 
 nav, .nav-links {
-    display: flex;
+    display: flex; /*El elemento se convierte en un contenedor flexbox. Por si solo, se comporta como un elemento de bloque. Sus elementos secundarios se convertirán en elementos flexbox.*/
 }
 
 nav {
-    justify-content: space-around;
-    align-items: center;
-    height: 17vh;
+    justify-content: space-around; /*El espacio restante se distribuye alrededor de los elementos de flexbox/grid: esto agrega espacio antes del primer elemento y después del último*/
+    align-items: center; /*Alinear elementos: Los elementos de flexbox están alineados en el centro del eje transversal. Por defecto, el eje transversal es vertical. Esto significa que los elementos de Flexbox estarán centrados verticalmente.*/
+    height: 17vh; /*Define la altura del elemento*/
 }
 
 .nav-links {
-    gap: 2rem;
-    list-style: none;
-    font-size: 1.5rem;
+    gap: 2rem; /*Establece los espacios (canalones) entre filas y columnas*/
+    list-style: none; /*Estilo de lista*/
+    font-size: 1.5rem; /*Tamaño de fuente. "Independiente del contexto"*/
 }
 
 a {
     color: black;
-    text-decoration: none;
-    text-decoration-color: white;
+    text-decoration: none; /*Define cómo se adorna el contenido del texto del elemento. None: elimina cualquier decoración de texto.*/
+    text-decoration-color: white; /*Establece el color de las decoraciones agregadas al texto*/
 }
 
 a:hover {
     color: grey;
-    text-decoration: underline;
-    text-underline-offset: 1rem;
+    text-decoration: underline; /*Subraya el contenido del texto*/
+    text-underline-offset: 1rem; /*Establece la distancia de desplazamiento de una línea decorativa de texto subrayado desde su posición original*/
     text-decoration-color: rgb(181, 181, 181);
 }
 
@@ -61,51 +61,51 @@ a:hover {
 }
 
 .logo:hover{
-    cursor: default;
+    cursor: default; /*Establece el cursor del mouse al pasar el cursor sobre el elemento. Default: establece el cursor en el valor predeterminado del elemento. Para un enlace, sería un puntero. Para un texto sería un cursor de selección*/
 }
 
 /*HAMBURGER MENU*/
 
 #hamburger-nav {
-    display: none;
+    display: none; /*Establece el comportamiento de visualización del elemento. None: el elemento se elimina por completo, como si no estuviera en el código HTML en primer lugar.*/
 }
 
 .hamburger-menu {
-    position: relative;
-    display: inline-block;
+    position: relative; /*Define el comportamiento de posición del elemento. Relative: el elemento permanecerá en el flujo natural de la página. También posiciona el elemento: actuará como punto de anclaje para el bloque rosa absolutamente posicionado.*/
+    display: inline-block; /*El elemento comparte propiedades de un elemento en línea y de bloque. Línea: el elemento se comporta como texto simple y se inserta en un bloque de texto. Bloquear: puedes aplicar height y width valores.*/
 }
 
 .hamburger-icon {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: column; /*Define cómo se ordenan los elementos de flexbox dentro de un contenedor de flexbox. Column: están ordenados de la misma manera que la dirección del texto, a lo largo del eje transversal.*/
+    justify-content: space-between; /*El espacio restante se distribuye entre los elementos flexbox/grid*/
     height: 24px;
-    width: 30px;
-    cursor: pointer;
+    width: 30px; /*Define el ancho del elemento*/
+    cursor: pointer; /*Puntero "dedo arriba"*/
 }
 
 .hamburger-icon span {
     width: 100%;
     height: 2px;
-    background-color: black;
+    background-color: black; /*Define el color del fondo del elemento*/
     transition: all 0.3 ease-in-out;
 }
 
 .menu-links {
-    position: absolute;
-    top: 100%;
-    right: 0;
+    position: absolute; /*El elemento no permanecerá en el flujo natural de la página. Se posicionará según el ancestro más cercano. Debido a que está posicionado, actuará como un punto de anclaje para el bloque rosa absolutamente posicionado.*/
+    top: 100%; /*Arriba: define la posición del elemento según su borde superior. Si el elemento está en una posición relativa, el elemento se moverá hacia abajo en la cantidad definida por el valor superior*/
+    right: 0; /*Define la posición del elemento según su borde derecho*/
     background-color: white;
     width: fit-content;
-    max-height: 0;
-    overflow: hidden;
+    max-height: 0; /*Altura máxima*/
+    overflow: hidden; /*Desbordamiento: define cómo se muestra el contenido desbordado tanto en el eje horizontal como en el vertical. Hidden: el contenido desbordado está oculto y no se puede acceder a él. */
     transition: all 0.3 ease-in-out;
 }
 
 .menu-links a {
-    display: block;
-    padding: 10px;
-    text-align: center;
+    display: block; /*El elemento se convierte en un elemento de bloque: comienza en una nueva línea y ocupa todo el ancho.*/
+    padding: 10px; /*Cuando se utiliza 1 valor, el relleno se establece para los 4 lados*/
+    text-align: center; /*El contenido del texto está centrado*/
     font-size: 1.5rem;
     color: black;
     text-decoration: none;
@@ -121,11 +121,11 @@ a:hover {
 }
 
 .hamburger-icon.open span:first-child {
-    transform: rotate(45deg) translate(10px, 5px);
+    transform: rotate(45deg) translate(10px, 5px); /*Transform: define cómo se transforma el elemento. Rotate: gira el elemento.*/
 }
 
 .hamburger-icon.open span:nth-child(2) {
-    opacity: 0;
+    opacity: 0; /*Opacidad: define qué tan opaco es el elemento. 0: totalmente transparente.*/
 }
 
 .hamburger-icon.open span:last-child {
@@ -133,11 +133,11 @@ a:hover {
 }
 
 .hamburger-icon span:first-child {
-    transform: none;
+    transform: none; /*Elimina cualquier transformación*/
 }
 
 .hamburger-icon span:first-child {
-    opacity: 1;
+    opacity: 1; /*Totalmente opaco*/
 }
 
 .hamburger-icon span:first-child {
@@ -147,11 +147,11 @@ a:hover {
 /*SECTIONS*/
 
 section {
-    padding-top: 4vh;
+    padding-top: 4vh; /*Acolchado superior: define el espacio dentro del elemento, en la parte superior. */
     height: 96vh;
     margin: 0 10rem;
-    box-sizing: border-box;
-    min-height: fit-content;
+    box-sizing: border-box; /*Tamaño de caja: define cómo se calcula el ancho y alto del elemento: si incluyen el relleno y los border o no. border-box: el ancho y alto del elemento se aplican a todas las partes del elemento: el contenido, el relleno y los bordes.*/
+    min-height: fit-content; /*Altura mínima*/
 }
 
 .section-container {
@@ -162,7 +162,7 @@ section {
 
 #profile {
     display: flex;
-    justify-content: center;
+    justify-content: center; /*Los elementos de flexbox/grid están centrados a lo largo del eje principal del contenedor*/
     gap: 5rem;
     height: 80vh;
 }
@@ -175,12 +175,12 @@ section {
 }
 
 .section__text {
-    align-self: center;
+    align-self: center;  /*Se aplica solo a un único elemento de flexbox, en lugar de a todos.*/
     text-align: center;
 }
 
 .section__text p {
-    font-weight: 600;
+    font-weight: 600; /*Peso de fuente. 600: semi negrita. Va de 100 a 900 */
 }
 
 .section__text__p1 {
@@ -189,7 +189,7 @@ section {
 
 .section__text__p2 {
     font-size: 1.75rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1rem; /*Define el espacio fuera del elemento, en la parte inferior*/
 }
 
 .title {
@@ -200,7 +200,7 @@ section {
 #socials-container {
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: 1rem; /*Define el espacio fuera del elemento, en la parte superior*/
     gap: 1rem;
 }
 
@@ -224,7 +224,7 @@ section {
     transition: all 300ms ease;
     padding: 1rem;
     width: 8rem;
-    border-radius: 2rem;
+    border-radius: 2rem; /*Define el radio de las esquinas del elemento*/
 }
 
 .btn-color-1,
@@ -239,7 +239,7 @@ section {
 
 .btn-color-1,
 .btn-color-2:hover {
-    background: rgb(53, 53, 53);
+    background: rgb(53, 53, 53); 
     color: white;
 }
 
