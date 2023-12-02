@@ -258,3 +258,173 @@ section {
 .btn-container {
     gap: 1rem;
 }
+
+/*ABOUT ME*/
+
+#about {
+    position: relative;
+}
+
+.about-containers {
+    gap: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.about-details-container {
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about-containers,
+.about-details-container {
+    display: flex;
+}
+
+.about-pic {
+    border-radius: 2rem;
+}
+
+.arrow {
+    position: absolute;
+    right: -5rem;
+    bottom: 2.5rem;
+}
+
+.details-container {
+    padding: 1.5rem;
+    flex: 1;
+    background: white;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    text-align: center;
+}
+
+.section-container {
+    gap: 4rem;
+    height: 80%;
+}
+
+.section__pic-container {
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+}
+
+/*EXPERIENCE SECTION*/
+
+#experience {
+    position: relative;
+}
+
+.experience-sub-title {
+    color: rgb(85, 85, 85);
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+}
+
+.experience-details-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.article-container {
+    display: flex;
+    text-align: initial;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2.5rem;
+    justify-content: space-around;
+}
+
+article {
+    display: flex;
+    width: 10rem;
+    justify-content: space-around;
+    gap: 0.5rem;
+}
+
+article .icon {
+    cursor: default;
+}
+
+/*PROJECTS SECTION*/
+
+#projects {
+    position: relative;
+}
+
+.color-container {
+    border-color: rgb(163, 163, 163);
+    background: rgb(250, 250, 250);
+}
+
+.project-img {
+    border-radius: 2rem;
+    width: 90%; /* "Tamaño adecuado"*/
+    height: 90%;
+}
+
+.project-title {
+    margin: 1rem; /* "Espacio del texto de: Project one two three"*/
+    color: black;/*"Color del texto de los 3 projects"*/
+}
+
+.project-btn {
+    color:black;
+    border-color: rgb(163, 163, 163);
+}
+
+/*CONTACT*/
+
+#contact {
+    display: flex; /*Organiza la información horizontal*/
+    justify-content: center;
+    flex-direction: column; /*Organiza la información en vertical*/
+    height: 70vh;
+}
+
+.contact-info-upper-container {
+    display: flex; /*Organiza las cuentas en horizontal*/
+    justify-content: center; /*Centra lo de arriba*/
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid; /*Coloca un borde alrededor de las cuentas*/
+    border-color: rgb(163, 163, 163);/*Colocar el borde de color gris*/
+    background: rgb(250, 250, 250); /*Coloca un fondo dentro del borde*/
+    margin: 2rem auto; /*Hace el borde más pequeño*/
+    padding: 0.5rem; /*Hace el borde más ancho de los lados superiores*/
+}
+
+.contact-info-container {
+    display: flex;
+    align-items: center; /*Centro cuentas*/
+    justify-content: center;
+    gap: 0.5rem; /*Espacio entre el icono y el texto*/
+    margin: 1rem; /*Más ancho el borde*/
+}
+
+.contact-info-container p {
+    font-size: large; /*Más largo el borde*/
+}
+
+.contact-icon {
+    cursor: default; /*Triangulo*/
+}
+
+.email-icon {
+    height: 2.5rem; /*Icono más grande*/
+}
+
+/*FOOTER SECTION*/
+
+footer {
+    height: 26vh; /*Espacio del copyright... y el borde inferior de la página*/
+    margin: 0 1rem; /*Espacio del lado izq de la página y el texto*/
+}
+
+footer p {
+    text-align: center;
+}
